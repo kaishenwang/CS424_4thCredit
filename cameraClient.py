@@ -4,7 +4,7 @@ import picamera
 
 # Connect a client socket to my_server:8000 (change my_server to the
 # hostname of your server)
-my_server = '10.0.2.15'#'10.193.175.198'
+my_server = '10.193.175.198'
 client_socket = socket.socket()
 client_socket.connect((my_server, 8000))
 
