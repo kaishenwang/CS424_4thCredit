@@ -11,10 +11,10 @@ OPCODE_DRIVE = 137
 VELOCITY_SECOND = 90
 VELOCITY_FIRST = 0
 
-StraightList = [137, 0, 90, 0x80, 0x0]
+StraightList = [137, 0, 100, 0x80, 0x0]
 StopList = [137, 0, 0, 0x80, 0x0]
-RightList = [137, 0, 150, 0xFF, 0xFF]
-LeftList = [137, 0, 150, 0x00, 0x01]
+RightList = [137, 0, 100, 0xFF, 0xFF]
+LeftList = [137, 0, 100, 0x00, 0x01]
 
 def ints2str(lst):
     '''
@@ -41,19 +41,20 @@ while True:
     key = getkey()
     if key == keys.UP:
         s.write(ints2str(StraightList))
-        time.sleep(0.5)
-        s.write(ints2str(StopList))
+        time.sleep(0.2)      
     elif key == keys.LEFT:
         s.write(ints2str(LeftList))
-        time.sleep(0.5)
+        time.sleep(0.2)
         s.write(ints2str(StopList))
     elif key == keys.RIGHT:
         s.write(ints2str(RightList))
-        time.sleep(0.5)
+        time.sleep(0.2)
         s.write(ints2str(StopList))
+    elif key == keys.DOWN:
+        s.write(ints2str(StopList))
+        time.sleep(0.2)
     elif key == 'q':
         break 
-    time.sleep(0.5)
 
 
          
