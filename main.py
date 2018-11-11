@@ -11,9 +11,9 @@ OPCODE_DRIVE = 137
 VELOCITY_SECOND = 90
 VELOCITY_FIRST = 0
 
-StraightList = [137, 0, 90, 0, 0x8000]
-LeftList = [137, 0, 150, 0, 0xFFFF]
-RighttList = [137, 0, 150, 0, 0x0001]
+StraightList = [137, 0, 90, 0x80, 0x0]
+LeftList = [137, 0, 150, 0xFF, 0xFF]
+RighttList = [137, 0, 150, 0x00, 0x01]
 
 def ints2str(lst):
     '''
