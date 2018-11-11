@@ -41,12 +41,15 @@ while True:
     key = getkey()
     if key == keys.UP:
         s.write(ints2str(StraightList))
+        time.sleep(0.5)
         s.write(ints2str(StopList))
     elif key == keys.LEFT:
         s.write(ints2str(LeftList))
+        time.sleep(0.5)
         s.write(ints2str(StopList))
     elif key == keys.RIGHT:
         s.write(ints2str(RightList))
+        time.sleep(0.5)
         s.write(ints2str(StopList))
     elif key == 'q':
         break 
