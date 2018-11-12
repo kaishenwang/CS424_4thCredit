@@ -1,6 +1,5 @@
 import serial
 import time
-import socket  
 from getkey import getkey, keys
 
 # this is the port you're connecting to the irobot with
