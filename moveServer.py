@@ -43,7 +43,8 @@ while True:
     if not data:
         print "client has exist"
         break
-    if data[0] == "u":
+    key = data[0]
+    if key == "u":
         s.write(ints2str(StraightList))
         time.sleep(0.2)      
     elif key == "l":
