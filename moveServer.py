@@ -36,10 +36,10 @@ s.write(ints2str([132]))
 
 
 address = ('0.0.0.0', 31500)
-s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-s.bind(address)
+server = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+server.bind(address)
 while True:
-    data, addr = s.recvfrom(1)
+    data, addr = server.recvfrom(1)
     if not data:
         print "client has exist"
         break
@@ -62,4 +62,4 @@ while True:
         break 
 
 
-s.close()
+server.close()
