@@ -1,7 +1,7 @@
 import socket  
 from getkey import getkey, keys
 # addr: ifconfig, en0, inet  
-address = ('127.0.0.1', 31500)  
+address = ('10.193.245.8', 31500)  
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  
   
 while True:  
