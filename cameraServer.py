@@ -12,7 +12,7 @@ connection = server_socket.accept()[0].makefile('rb')
     # Run a viewer with an appropriate command line. Uncomment the mplayer
     # version if you would prefer to use mplayer instead of VLC
 #cmdline = ['vlc', '--demux', 'h264', '-']
-cmdline = ['mplayer', '-fps', '25', '-cache', '1024', '-']
+cmdline = ['mplayer', '-fps', '25', '-cache', '128', '-']
 player = subprocess.Popen(cmdline, stdin=subprocess.PIPE)
 try:
 
