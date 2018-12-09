@@ -12,7 +12,7 @@ client_socket.connect((my_server, 8000))
 connection = client_socket.makefile('wb')
 try:
     with picamera.PiCamera() as camera:
-        camera.resolution = (100, 100)
+        camera.resolution = (640, 480)
         camera.framerate = 24
         # Start a preview and let the camera warm up for 2 seconds
         camera.start_preview()
@@ -20,7 +20,7 @@ try:
         # Start recording, sending the output to the connection for 60
         # seconds, then stop
         camera.start_recording(connection, format='h264')
-        camera.wait_recording(60)
+        camera.wait_recording(120)
         camera.stop_recording()
 finally:
     connection.close()
